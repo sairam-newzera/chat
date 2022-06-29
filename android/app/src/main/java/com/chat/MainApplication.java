@@ -12,7 +12,7 @@ import com.facebook.soloader.SoLoader;
 import com.chat.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-
+mport androidx.annotation.Nullable;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
@@ -35,6 +35,10 @@ public class MainApplication extends Application implements ReactApplication {
         protected String getJSMainModuleName() {
           return "index";
         }
+        @Override
+        protected @Nullable String getBundleAssetName() {
+        return "app.bundle";
+      }
       };
 
   private final ReactNativeHost mNewArchitectureNativeHost =
